@@ -83,3 +83,5 @@ void loop(){
 体験の時の復習になるが、ブレッドボードは短い辺の方が、電気的につながっています(図中の黒線方向)。  
 <img src="https://user-images.githubusercontent.com/106954082/228745989-886c0635-d565-4d32-9e69-351bf8846512.png" width="50%">  
 つまり、つなぎ方は部品同士のつなぎ方は次図のようになります。  
+<img src="https://github.com/tutu-san/note_arduino/assets/106954082/2176bd40-e6f8-4354-ac46-2bc859106e36" width="50%">  
+
