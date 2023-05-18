@@ -1,9 +1,9 @@
 # Arduinoの基本の書き方を学ぶ (section 1)
 
 ## section 1.1 Arduino のはじめの画面
-
+目的 ： Arduino独特の setup関数、loop関数について学ぶとともに、 <Arduino.h>のインクルードの必要について周知する
 ```cpp
-#include <arduino.h> //platformIO only
+#include <Arduino.h> //platformIO only
 
 void setup(){
 
@@ -21,7 +21,7 @@ Arduino IDE や VSCode (以下両方含めて "IDE" とします)を開いて、
 次にもう一つの```loop()```について、この関数は先ほどの```setup()```が実行された後、ずっと繰り返し実行される関数です。
 この二つの関数に他の関数を書いていくことになります。
 
-```#include <arduino.h>```が一番上にある人もいると思います。書かれてなかったら、これは書きましょう。  
+```#include <Arduino.h>```が一番上にある人もいると思います。書かれてなかったら、これは書きましょう。  
 Arduino IDE以外では、 Arduino用のファイルをインクルードする必要があるからです。
 
 <details> <summary>おまけ：実際にsetupとloopを使用した例</summary><div>
@@ -65,13 +65,16 @@ void loop(){
 	ps4_receive();
 }
 ```
-校内ロボコンの例からもわかるように、実際には、```setup()```や```loop()```にたくさんの処理を直接書くようなことはそんなにしません。
+```setup()```に初期設定を、```loop()```にその後の処理をさせていることがわかるでしょうか？
+<br>
+ところで、校内ロボコンの例では、```setup()```や```loop()```にたくさんの処理を直接書くようなことをしていません。
 <br>
 機能別に関数を作り、分けたほうが、読みやすく、修正しやすくなることが多いからです。
 </div> 
 </details>
 
 ## section 1.2 Lチカをもう一度やってみよう
+目的 ： Lチカをすることで、Arduinoのデジタル出力の方法について学ぶ
 ### 用意するもの
 * Arduino nano 
 * ブレッドボード
