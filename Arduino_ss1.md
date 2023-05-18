@@ -46,13 +46,13 @@ void setup(){
 	//UART(シリアル)通信関係
 	Serial.begin(115200); //PCで状況を見るためにポートを開けている
 
-	//ステッピング関係
+	//ステッピング関係の初期設定
 	l6470_setup();
 
 	//LED1
 	pinMode(LED1_PIN, OUTPUT);
 
-	//電磁弁のピンの初期設定
+	//電磁弁のピンの初期設定  (これくらいなら関数化するまでもない)
 	pinMode(VALVE_SIGN1, OUTPUT);
     digitalWrite(VALVE_SIGN1, LOW);
 
@@ -82,15 +82,22 @@ void loop(){
 ### 回路を組む
 #### 復習 ： ブレッドボード
 体験の時の復習になるが、ブレッドボードは短い辺の方が、電気的につながっています(図中の黒線方向)。  
-<img src="https://user-images.githubusercontent.com/106954082/228745989-886c0635-d565-4d32-9e69-351bf8846512.png" width="50%">  
+<img src="https://user-images.githubusercontent.com/106954082/228745989-886c0635-d565-4d32-9e69-351bf8846512.png" width="40%">  
 つまり、つなぎ方は部品同士のつなぎ方は次図のようになります。  
-<img src="https://github.com/tutu-san/note_arduino/assets/106954082/2176bd40-e6f8-4354-ac46-2bc859106e36" width="50%">  
+<img src="https://github.com/tutu-san/note_arduino/assets/106954082/2176bd40-e6f8-4354-ac46-2bc859106e36" width="40%">  
 ↑自分でも擁護できない程ひどい図(修正したいね)  
 
 この図から電気の流れが読み取れるでしょうか？(ひどくて読めないかも...)  
 この図の回路は電気的にしっかりとつながっています。確認してみましょう。  
 
 #### Arduinoをブレッドボードつないで回路を作る
-では、復習をしたところで、回路を作っていきましょう。  
-体験の時とは違って今度は、ピンを指定する。  
-<img src="https://github.com/tutu-san/note_arduino/assets/106954082/d69811c3-94a9-4b9d-983e-d2d07721c127" width="50%">  
+では、復習をしたところで、回路を作っていきましょう。    
+<img src="https://github.com/tutu-san/note_arduino/assets/106954082/d69811c3-94a9-4b9d-983e-d2d07721c127" width="70%">  
+この回路図を参考にして、回路を作ってみましょう。(見にくかったらごめん)  
+Arduino nano のピンは + 側を D5 ピンに、 - 側を GND ピンにつないでください。  
+
+今回の回路のチェックポイント(電源を入れる前に確かめること)
+*  ＋ 側がD5ピン 、ー 側が GNDピン につながっていることを確かめる
+* LEDのアノード(+)、カソード(-)の向きは良いか確かめる
+
+### プログラムを書く
