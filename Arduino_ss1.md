@@ -28,4 +28,6 @@ C言語の学習で慣れたVSCodeを使えるのはもちろんのこと、サ�
 入れ方
 1. VSCodeの拡張機能タブを開く  
 ![nanika](https://github.com/tutu-san/note_arduino/assets/106954082/90513ffb-ccd2-428b-9c0a-1f6fef3c2ad0)  
-↑これ
+↑これ  
+2. 検索バーに"PlatformIO IDE"と入れて一番上の"PlatformIO IDE"をクリックする。
+
