@@ -26,4 +26,6 @@ Platform IO IDE + VSCode は、 VSCode上に拡張機能である Platform IO �
 C言語の学習で慣れたVSCodeを使えるのはもちろんのこと、サジェスト機能が会ったり、ファイル分割、ライブラリを入れるのが簡単にできたり、他の拡張機能と組み合わせて、便利に使えるようにできます。その代わりに、少し設定項目が多かったり、難しいところがあったりします。  
 
 入れ方
-1. VSCodeの拡張機能タブを開く
+1. VSCodeの拡張機能タブを開く  
+![nanika](https://github.com/tutu-san/note_arduino/assets/106954082/90513ffb-ccd2-428b-9c0a-1f6fef3c2ad0)  
+↑これ
