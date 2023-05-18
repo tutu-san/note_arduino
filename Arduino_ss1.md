@@ -54,7 +54,7 @@ void setup(){
 
 	//電磁弁のピンの初期設定  (これくらいなら関数化するまでもない)
 	pinMode(VALVE_SIGN1, OUTPUT);
-    digitalWrite(VALVE_SIGN1, LOW);
+    	digitalWrite(VALVE_SIGN1, LOW);
 
     //コントローラーの初期設定
     ps4_init();
