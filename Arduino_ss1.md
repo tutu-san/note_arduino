@@ -29,5 +29,8 @@ C言語の学習で慣れたVSCodeを使えるのはもちろんのこと、サ�
 1. VSCodeの拡張機能タブを開く  
 ![nanika](https://github.com/tutu-san/note_arduino/assets/106954082/90513ffb-ccd2-428b-9c0a-1f6fef3c2ad0)  
 ↑これ  
-2. 検索バーに"PlatformIO IDE"と入れて一番上の"PlatformIO IDE"をクリックする。
+2. 検索バーに"PlatformIO IDE"と入れて一番上の"PlatformIO IDE"をクリックする。  
+3. この画面に"Install"をクリックする。(画面はインストール後の写真)
+![image](https://github.com/tutu-san/note_arduino/assets/106954082/a0b59b17-4b0d-42aa-85d1-8f4528ad7e8f)  
+
 
