@@ -12,25 +12,8 @@
 ### 方法1 : Arduino IDE をつかう
 Arduino IDEとは、Arduinoのために作られたIDE(統合開発環境)です。まぁ、Arduino公式の開発環境だと思ってください。  
 設定などが(普通に使う分には)めんどくさくないです。 学校(ろぼA)のPCにはこれが入っています。
-
-入れ方  
-1. 公式サイトからダウンロード(https://www.arduino.cc/en/software)
-補足:個人的おすすめは下の方にある"Legacy IDE (1.8.X)"
-
-2. ダウンロードしたインストーラーを実行 or ファイルを移動して、インストールする。(gccやgitのインストールの時と同じようにやってね)
-
-3. おしまい！(必要に応じて再起動してね)
-
+　　
 ### 方法2 : Platform IOを使う
 Platform IO IDE + VSCode は、 VSCode上に拡張機能である Platform IO を入れて使うものになります。  
 C言語の学習で慣れたVSCodeを使えるのはもちろんのこと、サジェスト機能が会ったり、ファイル分割、ライブラリを入れるのが簡単にできたり、他の拡張機能と組み合わせて、便利に使えるようにできます。その代わりに、少し設定項目が多かったり、難しいところがあったりします。  
-
-入れ方
-1. VSCodeの拡張機能タブを開く  
-![nanika](https://github.com/tutu-san/note_arduino/assets/106954082/90513ffb-ccd2-428b-9c0a-1f6fef3c2ad0)  
-↑これ  
-2. 検索バーに"PlatformIO IDE"と入れて一番上の"PlatformIO IDE"をクリックする。  
-3. この画面に"Install"をクリックする。(画面はインストール後の写真)
-![image](https://github.com/tutu-san/note_arduino/assets/106954082/a0b59b17-4b0d-42aa-85d1-8f4528ad7e8f)  
-
 
