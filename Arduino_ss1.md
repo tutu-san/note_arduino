@@ -93,4 +93,4 @@ void loop(){
 #### Arduinoをブレッドボードつないで回路を作る
 では、復習をしたところで、回路を作っていきましょう。  
 体験の時とは違って今度は、ピンを指定する。  
-
+<img src="https://github.com/tutu-san/note_arduino/assets/106954082/d69811c3-94a9-4b9d-983e-d2d07721c127" width="50%">  
