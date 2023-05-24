@@ -8,3 +8,4 @@
 * 抵抗(10kΩ)
 
 ### 回路を組む
+<img src="https://github.com/tutu-san/note_arduino/assets/106954082/04597539-b298-4299-a0ee-7a5afa49a335" width="70%">
