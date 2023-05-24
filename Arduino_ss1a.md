@@ -24,55 +24,6 @@ Arduino IDE や VSCode (以下両方含めて "IDE" とします)を開いて、
 ```#include <Arduino.h>```が一番上にある人もいると思います。書かれてなかったら、これは書きましょう。  
 Arduino IDE以外では、 Arduino用のファイルをインクルードする必要があるからです。
 
-<details> <summary>おまけ：実際にsetupとloopを使用した例</summary><div>
-  
-```cpp
-//簡単な Lチカのコード
-void setup(){
-  pinMode(11, OUTPUT); //ピンの初期設定
-}
-  
-void loop(){
-  digitalWrite(11, HIGH); //11番ピンから電流を流す
-  delay(100);             //100ms待つ
-  digitalWrite(11, LOW);  //11番ピンからの電流を止める
-  delay(100);             //100ms待つ
-}
-```
-
-```cpp
-//校内ロボコンで使用したコード(改)
-void setup(){
-	//UART(シリアル)通信関係
-	Serial.begin(115200); //PCで状況を見るためにポートを開けている
-
-	//ステッピング関係の初期設定
-	l6470_setup();
-
-	//LED1
-	pinMode(LED1_PIN, OUTPUT);
-
-	//電磁弁のピンの初期設定  (これくらいなら関数化するまでもない)
-	pinMode(VALVE_SIGN1, OUTPUT);
-    	digitalWrite(VALVE_SIGN1, LOW);
-
-    //コントローラーの初期設定
-    ps4_init();
-}
-
-void loop(){
-    //コントローラーの受信関連の関数(ループで実行する)
-	ps4_receive();
-}
-```
-```setup()```に初期設定を、```loop()```にその後の処理をさせていることがわかるでしょうか？
-<br>
-ところで、校内ロボコンの例では、```setup()```や```loop()```にたくさんの処理を直接書くようなことをしていません。
-<br>
-機能別に関数を作り、分けたほうが、読みやすく、修正しやすくなることが多いからです。
-</div> 
-</details>
-
 ## section 1.2 Lチカをもう一度やってみよう
 目的 ： Lチカをすることで、Arduinoのデジタル出力の方法について学ぶ
 ### 用意するもの
@@ -86,9 +37,9 @@ void loop(){
 #### 復習 ： ブレッドボード
 体験の時の復習になるが、ブレッドボードは短い辺の方が、電気的につながっています(図中の黒線方向)。  
 <img src="https://user-images.githubusercontent.com/106954082/228745989-886c0635-d565-4d32-9e69-351bf8846512.png" width="40%">  
-つまり、つなぎ方は部品同士のつなぎ方は次図のようになります。  
-<img src="https://github.com/tutu-san/note_arduino/assets/106954082/2176bd40-e6f8-4354-ac46-2bc859106e36" width="40%">  
-↑自分でも擁護できない程ひどい図(修正したいね)  
+
+電気科の創造電気実験実習の指導書や、ウェブサイトを見て実例を見てみることをお勧めします。  
+おすすめサイト [基礎からのIoT入門](https://iot.keicode.com/electronics/what-is-breadboard.php)
 
 この図から電気の流れが読み取れるでしょうか？(ひどくて読めないかも...)  
 この図の回路は電気的にしっかりとつながっています。確認してみましょう。  
@@ -135,5 +86,29 @@ delay(unsigned long ms)
 引数が```ms```となっていることからわかるように、単位はミリ秒(ms)です。  
 (```unsigned lomg```型となっていますが、整数型だと思ってください。)  
 
-#### 例題 1
+#### 問題 1
+LEDを "100ミリ秒間隔で" 点滅させてみましょう。  
+(先ほど作った回路で光らせるので、ピンの番号は、5 になります。)  
 
+<details> <summary>答え</summary><div>
+  
+```cpp
+#include <Arduino.h>
+
+void setup(){
+	pinMode(5, OUTPUT);
+}
+
+void loop(){
+	digitalWrite(5, HIGH);
+	delay(100);
+	digitalWrite(5, LOW);
+	delay(100);
+}
+/*
+loopの中身は、この通りじゃなくてもいいです。
+このコードと同じような動作をすればどれも正解とします。
+*/
+```
+</div> 
+</details>
