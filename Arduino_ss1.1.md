@@ -59,7 +59,7 @@ Arduino nano のピンは + 側を D5 ピンに、 - 側を GND ピンにつな�
 #### 新しいもの
 今回初めて出る関数は、3つです。一つひとつ紹介します。  
 
-1. pinMode (関数)
+1. pinMode 関数
 ```cpp
 pinMode(uint8_t pin, uint8_t mode);
 ```
@@ -67,7 +67,7 @@ pinMode(uint8_t pin, uint8_t mode);
 ```pin```には、ピン番号を入力します(uint8_tなので整数だよ)。  
 ```mode```には、入力/出力、どっちにするかを設定します。```INPUT```が入力、```OUTPUT```が出力です(他にも、オプションがあります。)。  
 
-2. digitalWrite (関数)
+2. digitalWrite 関数
 ```cpp
 digitalWrite(uint8_t pin, uint8_t val);
 ```
