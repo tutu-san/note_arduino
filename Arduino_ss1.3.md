@@ -46,7 +46,7 @@ void setup(){
 }
 
 void loop(){
-	if(digitalWrite(2)){
+if(digitalWrite(2)){
         digitalWrite(5, HIGH);
     }else{
         digitalWrite(5, LOW);
